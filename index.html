@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reloj Mundial - Zonas Horarias</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌍 Reloj Mundial</h1>
+            <p>Consulta la hora en diferentes ciudades del mundo</p>
+        </header>
+
+        <main>
+            <section class="controls">
+                <div class="control-group">
+                    <label for="city-selector">Selecciona una ciudad:</label>
+                    <select id="city-selector">
+                        <option value="America/New_York">Nueva York, EE.UU.</option>
+                        <option value="America/Los_Angeles">Los Ángeles, EE.UU.</option>
+                        <option value="America/Chicago">Chicago, EE.UU.</option>
+                        <option value="America/Toronto">Toronto, Canadá</option>
+                        <option value="America/Mexico_City">Ciudad de México, México</option>
+                        <option value="America/Sao_Paulo">São Paulo, Brasil</option>
+                        <option value="America/Buenos_Aires">Buenos Aires, Argentina</option>
+                        <option value="America/Lima">Lima, Perú</option>
+                        <option value="America/Bogota">Bogotá, Colombia</option>
+                        <option value="America/Santiago">Santiago, Chile</option>
+                        <option value="Europe/London">Londres, Reino Unido</option>
+                        <option value="Europe/Paris">París, Francia</option>
+                        <option value="Europe/Berlin">Berlín, Alemania</option>
+                        <option value="Europe/Madrid">Madrid, España</option>
+                        <option value="Europe/Rome">Roma, Italia</option>
+                        <option value="Europe/Moscow">Moscú, Rusia</option>
+                        <option value="Europe/Stockholm">Estocolmo, Suecia</option>
+                        <option value="Europe/Amsterdam">Ámsterdam, Países Bajos</option>
+                        <option value="Asia/Dubai">Dubái, EAU</option>
+                        <option value="Asia/Tokyo">Tokio, Japón</option>
+                        <option value="Asia/Shanghai">Shanghái, China</option>
+                        <option value="Asia/Hong_Kong">Hong Kong, China</option>
+                        <option value="Asia/Seoul">Seúl, Corea del Sur</option>
+                        <option value="Asia/Singapore">Singapur</option>
+                        <option value="Asia/Kolkata">Calcuta, India</option>
+                        <option value="Asia/Bangkok">Bangkok, Tailandia</option>
+                        <option value="Asia/Jakarta">Yakarta, Indonesia</option>
+                        <option value="Australia/Sydney">Sídney, Australia</option>
+                        <option value="Australia/Melbourne">Melbourne, Australia</option>
+                        <option value="Pacific/Auckland">Auckland, Nueva Zelanda</option>
+                        <option value="Africa/Cairo">El Cairo, Egipto</option>
+                        <option value="Africa/Johannesburg">Johannesburgo, Sudáfrica</option>
+                        <option value="Africa/Lagos">Lagos, Nigeria</option>
+                        <option value="Pacific/Honolulu">Honolulu, Hawái</option>
+                        <option value="Pacific/Apia">Apia, Samoa</option>
+                        <option value="Asia/Karachi">Karachi, Pakistán</option>
+                        <option value="Asia/Mumbai">Mumbai, India</option>
+                        <option value="Europe/Athens">Atenas, Grecia</option>
+                        <option value="Europe/Istanbul">Estambul, Turquía</option>
+                        <option value="America/Caracas">Caracas, Venezuela</option>
+                        <option value="America/Santo_Domingo">Santo Domingo, R. Dominicana</option>
+                        <option value="America/ Guatemala">Ciudad de Guatemala, Guatemala</option>
+                        <option value="America/San_Jose">San José, Costa Rica</option>
+                        <option value="America/Panama">Ciudad de Panamá, Panamá</option>
+                        <option value="America/Managua">Managua, Nicaragua</option>
+                        <option value="America/Tegucigalpa">Tegucigalpa, Honduras</option>
+                        <option value="America/San_Salvador">San Salvador, El Salvador</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label for="format-toggle">Formato de hora:</label>
+                    <div class="toggle-container">
+                        <span>12h</span>
+                        <label class="switch">
+                            <input type="checkbox" id="format-toggle">
+                            <span class="slider"></span>
+                        </label>
+                        <span>24h</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="clock-display">
+                <div class="city-info">
+                    <h2 id="city-name">Nueva York, EE.UU.</h2>
+                    <p id="utc-offset">UTC-5</p>
+                </div>
+                
+                <div class="time-display">
+                    <div class="time" id="current-time">00:00:00</div>
+                    <div class="date" id="current-date">Lunes, 1 de Enero de 2025</div>
+                </div>
+            </section>
+
+            <section class="additional-clocks">
+                <h3>Otras ciudades populares</h3>
+                <div class="clocks-grid" id="clocks-grid">
+                    <!-- Los relojes adicionales se generarán dinámicamente -->
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Creado con ❤️ por <a href="https://github.com/maykolg" target="_blank">maykolg</a></p>
+            <p>&copy; 2025 - Reloj Mundial</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
